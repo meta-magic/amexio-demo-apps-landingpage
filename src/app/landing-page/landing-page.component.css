@@ -1,0 +1,15 @@
+.navbardemo .navbar-container {
+    position: relative !important;
+    width: 90%;
+  }
+
+  .bgCss834backgound {
+    height: 50% !important;
+  }
+
+  /* .navbardemo{
+    .topnav{
+      position: unset;
+      position: static !important;
+    }
+  } */
