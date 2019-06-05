@@ -14,6 +14,7 @@
 
   amexio-viewport-content-body {
     display: grid;
+    overflow: auto;
     position: relative;
     justify-content: center;
     /* background: rebeccapurple; */
