@@ -19,13 +19,7 @@
           style="cursor: pointer;">
         </amexio-nav-item>
       </amexio-nav>
-      <br />
-      <br />
-      <br />
-      <br />
-
       <amexio-row>
-
         <amexio-column size="3" fit="false">
           <amexio-menu-ce [menu-alignment]="'center'" [menu-positioning]="'center'" [animation-type]="4"
             [data]="tempData" [size]="60">
@@ -38,10 +32,10 @@
             Enterprise Edition Demos
           </amexio-label>
           <amexio-row>
-            <amexio-column [size]="6" [fit]="true">
+            <amexio-column [size]="6" [fit]="false">
 
-              <amexio-card-ce [align]="'start'" [color]="'white'" [background]="'rgba(139,69,19,.3)'">
-                <amexio-header-ce [background]="'linear-gradient(40deg,#ffc2e9, #ec38ab)'" [height]="'35px'"
+              <amexio-card-ce [align]="'start'" [color]="'white'" [background]="'rgba(176,214,154,.5)'">
+                <amexio-header-ce amexioColorPalette [gradient]="true" [color-palette]="'random'" [height]="'35px'"
                   align="space-between">
                   <amexio-label [size]="'medium-bold'">
                     Demo 1
@@ -49,19 +43,20 @@
                   <amexio-image style=" cursor: pointer;" [icon-class]="'fa fa-external-link fa-2x'"
                     [tooltip]="'Fontawesome apple'" (onClick)="onDemoFirstClick()"></amexio-image>
                 </amexio-header-ce>
-
-                <amexio-image [overlay-effect]="'slide-left'"
-                  [overlay-text]="'Home Page Layouts provides built-in layouts to have a quick start on Home Pages for your enterprise Apps.!'"
-                  class="homepage-cursor" [path]="'assets/images/homepage_demo1.jpg'" tooltip="Home Page 1">
-                </amexio-image>
+                <amexio-body-ce>
+                  <amexio-image [overlay-effect]="'slide-left'"
+                    [overlay-text]="'Home Page Layouts provides built-in layouts to have a quick start on Home Pages for your enterprise Apps.!'"
+                    class="homepage-cursor" [path]="'assets/images/homepage_demo1.jpg'" >
+                  </amexio-image>
+                </amexio-body-ce>
               </amexio-card-ce>
 
 
             </amexio-column>
-            <amexio-column [size]="6" [fit]="true">
+            <amexio-column [size]="6" [fit]="false">
 
-              <amexio-card-ce [align]="'start'" [color]="'white'" [background]="'rgba(139,69,19,.3)'">
-                <amexio-header-ce [background]="'linear-gradient(40deg,#1ffE30,#2aaB55)'" [height]="'35px'"
+              <amexio-card-ce [align]="'start'" [color]="'white'" [background]="'rgba(176,214,154,.5)'">
+                <amexio-header-ce amexioColorPalette [gradient]="true" [color-palette]="'random'" [height]="'35px'"
                   align="space-between">
                   <amexio-label [size]="'medium-bold'">
                     Demo 2
@@ -73,12 +68,11 @@
                 <amexio-body-ce>
                   <amexio-image [overlay-effect]="'slide-left'"
                     [overlay-text]="'Home Page Layouts provides built-in layouts to have a quick start on Home Pages for your enterprise Apps.'"
-                    class="homepage-cursor" [path]="'assets/images/homepage_demo2.jpg'" tooltip="Home Page 2">
+                    class="homepage-cursor" [path]="'assets/images/homepage_demo2.jpg'" >
                   </amexio-image>
 
                 </amexio-body-ce>
-                <amexio-action-ce [align]="'left'">
-                </amexio-action-ce>
+
               </amexio-card-ce>
             </amexio-column>
           </amexio-row>
@@ -103,7 +97,6 @@
         <amexio-column size="10" fit="false">
 
           <!--  ViewPort Demo -->
-          <br />
           <amexio-row>
             <amexio-column size="12" fit="true">
 
@@ -114,9 +107,9 @@
                 <amexio-layout-item [fit]="true">
                   <amexio-layout-columns [border]="false" [orientation]="'horizontal'" [alignment]="'space-evenly'">
                     <amexio-layout-item>
-                      <amexio-card-ce [align]="'start'" [color]="'white'" [background]="'rgba(139,69,19,.3)'">
-                        <amexio-header-ce [background]="'linear-gradient(40deg,#a8ff78, #78ffd6)'" [height]="'35px'"
-                          align="space-between">
+                      <amexio-card-ce [align]="'start'" [color]="'white'" [background]="'rgba(29,187,22,.45)'">
+                        <amexio-header-ce amexioColorPalette [gradient]="true" [color-palette]="'random'"
+                          [height]="'35px'" align="space-between">
                           <amexio-label [size]="'medium-bold'">
                             Viewort Demo 1
                           </amexio-label>
@@ -126,16 +119,16 @@
                         <amexio-body-ce>
                           <amexio-image [overlay-effect]="'slide-left'" [overlay-text]="'Life is better when you Dance
                       Because Dance is the hidden language of the soul.'" class="homepage-cursor"
-                            [path]="'assets/viewport/demo1.png'" tooltip="Home Page 1">
+                            [path]="'assets/viewport/demo1.png'" >
                           </amexio-image>
 
                         </amexio-body-ce>
                       </amexio-card-ce>
                     </amexio-layout-item>
                     <amexio-layout-item>
-                      <amexio-card-ce [align]="'start'" [color]="'white'" [background]="'rgba(139,69,19,.3)'">
-                        <amexio-header-ce [background]="'linear-gradient(40deg,#ff9e20,#ff6a20)'" [height]="'35px'"
-                          align="space-between">
+                      <amexio-card-ce [align]="'start'" [color]="'white'" [background]="'rgba(29,187,22,.45)'">
+                        <amexio-header-ce amexioColorPalette [gradient]="true" [color-palette]="'vibrant'"
+                          [height]="'35px'" align="space-between">
                           <amexio-label [size]="'medium-bold'">
                             Viewport Demo 2
                           </amexio-label>
@@ -145,7 +138,7 @@
                         <amexio-body-ce>
                           <amexio-image [overlay-effect]="'slide-left'"
                             [overlay-text]="'If you want to buy some furniture then go throught it.'"
-                            class="homepage-cursor" [path]="'assets/viewport/demo2.png'" tooltip="Home Page 2">
+                            class="homepage-cursor" [path]="'assets/viewport/demo2.png'" >
                           </amexio-image>
 
                         </amexio-body-ce>
@@ -153,9 +146,9 @@
                       </amexio-card-ce>
                     </amexio-layout-item>
                     <amexio-layout-item>
-                      <amexio-card-ce [align]="'start'" [color]="'white'" [background]="'rgba(139,69,19,.3)'">
-                        <amexio-header-ce [background]="'linear-gradient(40deg,#bc4e9c, #f80359)'" [height]="'35px'"
-                          align="space-between">
+                      <amexio-card-ce [align]="'start'" [color]="'white'" [background]="'rgba(29,187,22,.45)'">
+                        <amexio-header-ce amexioColorPalette [gradient]="true" [color-palette]="'random'"
+                          [height]="'35px'" align="space-between">
                           <amexio-label [size]="'medium-bold'">
                             Viewport Demo 3
                           </amexio-label>
@@ -165,7 +158,7 @@
                         <amexio-body-ce>
                           <amexio-image [overlay-effect]="'slide-left'" [overlay-text]="'By the deep sea, or the jungle, and music in its roar;
                       I love not Man the less, but Nature more.'" class="homepage-cursor"
-                            [path]="'assets/viewport/demo3.png'" tooltip="Home Page 2">
+                            [path]="'assets/viewport/demo3.png'" >
                           </amexio-image>
 
                         </amexio-body-ce>
@@ -179,19 +172,18 @@
             </amexio-column>
           </amexio-row>
 
-          <br />
-          <br />
+
 
           <!--  Creative Menu Demo -->
           <amexio-row>
             <amexio-column size="12" fit="true">
-              <amexio-layout-columns [orientation]="'vertical'" [border]="false" [alignment]="'space-around'">
+              <amexio-layout-columns [orientation]="'vertical'" [border]="false" [alignment]="'center'">
                 <amexio-layout-item [fit]="true">
-                  <amexio-layout-columns [border]="false" [orientation]="'horizontal'" [alignment]="'space-around'">
+                  <amexio-layout-columns [border]="false" [orientation]="'horizontal'" [alignment]="'center'">
                     <amexio-layout-item>
-                      <amexio-card-ce [align]="'start'" [color]="'white'" [background]="'rgba(139,69,19,.3)'">
-                        <amexio-header-ce [background]="'linear-gradient(40deg,#141E30,#243B55)'" [height]="'35px'"
-                          align="space-between">
+                      <amexio-card-ce [align]="'start'" [color]="'white'" [background]="'rgba(29,187,22,.45)'">
+                        <amexio-header-ce amexioColorPalette [gradient]="true" [color-palette]="'classic'"
+                          [height]="'35px'" align="space-between">
                           <amexio-label [size]="'medium-bold'">
                             Menu Demo 1
                           </amexio-label>
@@ -201,7 +193,7 @@
                         <amexio-body-ce>
                           <amexio-image [overlay-effect]="'slide-left'"
                             [overlay-text]="'Creative Menu Demo with center alignment and animation effect.'"
-                            class="homepage-cursor" [path]="'assets/viewport/menu1.png'" tooltip="Home Page 1">
+                            class="homepage-cursor" [path]="'assets/viewport/menu1.png'" >
                           </amexio-image>
 
                         </amexio-body-ce>
@@ -210,9 +202,9 @@
                     </amexio-layout-item>
 
                     <amexio-layout-item>
-                      <amexio-card-ce [align]="'start'" [color]="'white'" [background]="'rgba(139,69,19,.3)'">
-                        <amexio-header-ce [background]="'linear-gradient(40deg,#457fca, #5691c8)'" [height]="'35px'"
-                          align="space-between">
+                      <amexio-card-ce [align]="'start'" [color]="'white'" [background]="'rgba(29,187,22,.45)'">
+                        <amexio-header-ce amexioColorPalette [gradient]="true" [color-palette]="'random'"
+                          [height]="'35px'" align="space-between">
                           <amexio-label [size]="'medium-bold'">
                             Menu Demo 2
                           </amexio-label>
@@ -222,7 +214,7 @@
                         <amexio-body-ce>
                           <amexio-image [overlay-effect]="'slide-left'"
                             [overlay-text]="'Creative Menu Demo with Right side alignment and animation effect.'"
-                            class="homepage-cursor" [path]="'assets/viewport/menu2.png'" tooltip="Home Page 2">
+                            class="homepage-cursor" [path]="'assets/viewport/menu2.png'" >
                           </amexio-image>
 
                         </amexio-body-ce>
@@ -231,9 +223,9 @@
                     </amexio-layout-item>
                     <amexio-layout-item>
 
-                      <amexio-card-ce [align]="'start'" [color]="'white'" [background]="'rgba(139,69,19,.3)'">
-                        <amexio-header-ce [background]="'linear-gradient(40deg,#40E0D0, #FF0080)'" [height]="'35px'"
-                          align="space-between">
+                      <amexio-card-ce [align]="'start'" [color]="'white'" [background]="'rgba(29,187,22,.45)'">
+                        <amexio-header-ce amexioColorPalette [gradient]="true" [color-palette]="'vibrant'"
+                          [height]="'35px'" align="space-between">
                           <amexio-label [size]="'medium-bold'">
                             Menu Demo 3
                           </amexio-label>
@@ -243,7 +235,7 @@
                         <amexio-body-ce>
                           <amexio-image [overlay-effect]="'slide-left'"
                             [overlay-text]="'Creative Menu Demo with left side alignment and animation effect.'"
-                            class="homepage-cursor" [path]="'assets/viewport/menu3.png'" tooltip="Home Page 2">
+                            class="homepage-cursor" [path]="'assets/viewport/menu3.png'" >
                           </amexio-image>
 
                         </amexio-body-ce>
@@ -261,12 +253,6 @@
         </amexio-column>
       </amexio-row>
 
-      <br />
-      <br />
-
-
-
-
 
     </amexio-viewport-content-body>
   </amexio-viewport-content>
@@ -279,18 +265,16 @@
     </amexio-viewport-background>
 
     <amexio-viewport-content-body>
-      <br />
-      <br />
-      <br />
-      <br />
+      <br>
+      <br>
 
       <amexio-row>
         <amexio-column size="2" fit="false">
         </amexio-column>
         <amexio-column [size]="8" [fit]="true">
 
-          <amexio-card-ce [align]="'center'" [color]="'white'" [background]="'rgba(139,69,19,.3)'">
-            <amexio-header-ce [background]="'linear-gradient(40deg, red, black)'" [height]="'35px'"
+          <amexio-card-ce [align]="'center'" [color]="'white'" [background]="'rgba(22,187,183,.4)'">
+            <amexio-header-ce amexioColorPalette [gradient]="true" [color-palette]="'classic'" [height]="'35px'"
               align=" space-between">
               <amexio-label [size]="'medium-bold'" style="padding-left:40px; cursor: pointer;">
                 Tech M Flix
@@ -302,7 +286,7 @@
               <amexio-image [overlay-effect]="'slide-left'"
                 [overlay-text]="'Netflix chronicles the rise of the cocaine trade in Colombia and the gripping real-life stories of drug kingpins of the late 80s in this raw, gritty original series.
                Also detailed are the actions taken by law enforcement as they battle in the war on drugs, targeting notorious and powerful figures that include drug lord Pablo Escobar.'"
-                class="homepage-cursor" [path]="'assets/images/techm.png'" tooltip="Home Page 1">
+                class="homepage-cursor" [path]="'assets/images/techm.png'" >
               </amexio-image>
 
             </amexio-body-ce>
@@ -323,7 +307,7 @@
   <amexio-viewport-content [scrollable]="false">
 
     <amexio-viewport-background>
-      <amexio-image [path]="'assets/images/se1.jpg'"></amexio-image>
+      <amexio-image [path]="'assets/images/se9.jpg'"></amexio-image>
     </amexio-viewport-background>
 
     <amexio-viewport-content-body>
@@ -337,15 +321,15 @@
         <amexio-column size="10" fit="true">
 
 
-          <amexio-label size="large-bold" [font-color]="'white'">
+          <amexio-label size="large-bold" [font-color]="'black'">
             Standard Edition Demos
           </amexio-label>
           <amexio-layout-columns [orientation]="'vertical'" [border]="false" [alignment]="'center'">
             <amexio-layout-item [fit]="true">
               <amexio-layout-columns [border]="false" [orientation]="'horizontal'" [alignment]="'center'">
                 <amexio-layout-item>
-                  <amexio-card-ce [align]="'start'" [color]="'white'" [background]="'rgba(139,69,19,.3)'">
-                    <amexio-header-ce [background]="'linear-gradient(40deg,#ff1E30,#243B55)'" [height]="'35px'"
+                  <amexio-card-ce [align]="'start'" [color]="'white'" [background]="'rgba(220,17,125,.4)'">
+                    <amexio-header-ce amexioColorPalette [gradient]="true" [color-palette]="'random'" [height]="'35px'"
                       align="space-between">
                       <amexio-label [size]="'medium-bold'">
                         U.S. Election APP
@@ -356,7 +340,7 @@
                     <amexio-body-ce>
                       <amexio-image [overlay-effect]="'slide-left'"
                         [overlay-text]="' U.S election Demo Application using Amexio tags. '" class="homepage-cursor"
-                        [path]="'assets/images/election.png'" tooltip="Home Page 1">
+                        [path]="'assets/images/election.png'" >
                       </amexio-image>
 
                     </amexio-body-ce>
@@ -364,9 +348,9 @@
                 </amexio-layout-item>
 
                 <amexio-layout-item>
-                  <amexio-card-ce [align]="'center'" [color]="'white'">
-                    <amexio-header-ce amexioColorPalette [gradient]="true" [color-palette]="'vibrant'" [color]="'black'"
-                      [height]="'35px'" align="space-between">
+                  <amexio-card-ce [align]="'center'" [color]="'white'" [background]="'rgba(220,17,125,.4)'">
+                    <amexio-header-ce amexioColorPalette [gradient]="true" [color-palette]="'random'" [color]="'white'"
+                      [color]="'black'" [height]="'35px'" align="space-between">
                       <amexio-label [size]="'medium-bold'">
                         Shopping APP
                       </amexio-label>
@@ -376,7 +360,7 @@
                     <amexio-body-ce>
                       <amexio-image [overlay-effect]="'slide-left'"
                         [overlay-text]="' Shopping Demo Application using multiple component of Amexio and  Amexio tags.'"
-                        class="homepage-cursor" [path]="'assets/images/shopping.png'" tooltip="Home Page 2">
+                        class="homepage-cursor" [path]="'assets/images/shopping.png'" >
                       </amexio-image>
 
                     </amexio-body-ce>
@@ -385,7 +369,7 @@
                 </amexio-layout-item>
                 <amexio-layout-item>
 
-                  <amexio-card-ce [align]="'center'">
+                  <amexio-card-ce [align]="'center'" [color]="'white'" [background]="'rgba(220,17,125,.4)'">
                     <amexio-header-ce [height]="'35px'" amexioColorPalette [gradient]="true"
                       [color-palette]="'amexio-theme-color4  '" align="space-between">
                       <amexio-label [size]="'medium-bold'">
@@ -398,7 +382,7 @@
 
                       <amexio-image [overlay-effect]="'slide-left'"
                         [overlay-text]="' Digital policy Demo Application using multiple component of Amexio and  Amexio tags.'"
-                        class="homepage-cursor" [path]="'assets/images/policy.png'" tooltip="Home Page 2">
+                        class="homepage-cursor" [path]="'assets/images/policy.png'" >
                       </amexio-image>
 
                     </amexio-body-ce>
@@ -417,78 +401,3 @@
   </amexio-viewport-content>
 
 </amexio-viewport>
-
-
-
-<amexio-label size="large-bold" [font-color]="'white'">
-  Standard Edition Demos
-</amexio-label>
-<amexio-layout-columns [orientation]="'vertical'" [border]="false" [alignment]="'center'">
-  <amexio-layout-item [fit]="true">
-    <amexio-layout-columns [border]="false" [orientation]="'horizontal'" [alignment]="'center'">
-      <amexio-layout-item>
-        <amexio-card-ce [align]="'start'" [color]="'white'" [background]="'rgba(139,69,19,.3)'">
-          <amexio-header-ce [background]="'linear-gradient(40deg,#ff1E30,#243B55)'" [height]="'35px'"
-            align="space-between">
-            <amexio-label [size]="'medium-bold'">
-              U.S. Election APP
-            </amexio-label>
-            <amexio-image style=" cursor: pointer;" [icon-class]="'fa fa-external-link fa-2x'"
-              [tooltip]="'Fontawesome apple'" (onClick)="onElectionDemoClick()"></amexio-image>
-          </amexio-header-ce>
-          <amexio-body-ce>
-            <amexio-image [overlay-effect]="'slide-left'"
-              [overlay-text]="' U.S election Demo Application using Amexio tags. '" class="homepage-cursor"
-              [path]="'assets/images/election.png'" tooltip="Home Page 1">
-            </amexio-image>
-
-          </amexio-body-ce>
-        </amexio-card-ce>
-      </amexio-layout-item>
-
-      <amexio-layout-item>
-        <amexio-card-ce [align]="'center'" [color]="'white'">
-          <amexio-header-ce amexioColorPalette [gradient]="true" [color-palette]="'vibrant'" [color]="'black'"
-            [height]="'35px'" align="space-between">
-            <amexio-label [size]="'medium-bold'">
-              Shopping APP
-            </amexio-label>
-            <amexio-image style=" cursor: pointer;" [icon-class]="'fa fa-external-link fa-2x'"
-              [tooltip]="'Fontawesome apple'" (onClick)="onShoppingDemoClick()"></amexio-image>
-          </amexio-header-ce>
-          <amexio-body-ce>
-            <amexio-image [overlay-effect]="'slide-left'"
-              [overlay-text]="' Shopping Demo Application using multiple component of Amexio and  Amexio tags.'"
-              class="homepage-cursor" [path]="'assets/images/shopping.png'" tooltip="Home Page 2">
-            </amexio-image>
-
-          </amexio-body-ce>
-
-        </amexio-card-ce>
-      </amexio-layout-item>
-      <amexio-layout-item>
-
-        <amexio-card-ce [align]="'center'">
-          <amexio-header-ce [height]="'35px'" amexioColorPalette [gradient]="true"
-            [color-palette]="'amexio-theme-color4  '" align="space-between">
-            <amexio-label [size]="'medium-bold'">
-              Insurance APP
-            </amexio-label>
-            <amexio-image style=" cursor: pointer;" [icon-class]="'fa fa-external-link fa-2x'"
-              [tooltip]="'Fontawesome apple'" (onClick)="onPolicyDemoClick()"></amexio-image>
-          </amexio-header-ce>
-          <amexio-body-ce>
-
-            <amexio-image [overlay-effect]="'slide-left'"
-              [overlay-text]="' Digital policy Demo Application using multiple component of Amexio and  Amexio tags.'"
-              class="homepage-cursor" [path]="'assets/images/policy.png'" tooltip="Home Page 2">
-            </amexio-image>
-
-          </amexio-body-ce>
-
-        </amexio-card-ce>
-
-      </amexio-layout-item>
-    </amexio-layout-columns>
-  </amexio-layout-item>
-</amexio-layout-columns>

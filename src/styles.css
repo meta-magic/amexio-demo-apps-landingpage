@@ -11,3 +11,12 @@
   .bgCss{ 
     height: 50% !important;
   } */
+
+  amexio-viewport-content-body {
+    display: grid;
+    position: relative;
+    justify-content: center;
+    /* background: rebeccapurple; */
+    height: 100%;
+    width: 100%;
+  }
