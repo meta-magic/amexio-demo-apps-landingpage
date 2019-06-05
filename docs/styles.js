@@ -89,7 +89,7 @@ module.exports = "@charset \"UTF-8\";\n/*!\n *  Font Awesome 4.7.0 by @davegandy
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/* You can add global styles to this file, and also import other style files\n\n.navbardemo .navbar-container {\n    position: relative !important;\n    width: 90%;\n  }\n  .bgCss834backgound {\n    \n  }\n\n  .bgCss{ \n    height: 50% !important;\n  } */\n\n  amexio-viewport-content-body {\n    display: -ms-grid;\n    display: grid;\n    position: relative;\n    justify-content: center;\n    /* background: rebeccapurple; */\n    height: 100%;\n    width: 100%;\n  }"
+module.exports = "/* You can add global styles to this file, and also import other style files\n\n.navbardemo .navbar-container {\n    position: relative !important;\n    width: 90%;\n  }\n  .bgCss834backgound {\n    \n  }\n\n  .bgCss{ \n    height: 50% !important;\n  } */\n\n  amexio-viewport-content-body {\n    display: -ms-grid;\n    display: grid;\n    position: relative;\n    justify-content: center;\n    /* background: rebeccapurple; */\n    height: 100%;\n    width: 100%;\n  }\n\n  /* amexio-viewport-content{\n    display: grid;\n    position: relative;\n    justify-content: center;\n\n  } */"
 
 /***/ }),
 
