@@ -32,13 +32,17 @@ export class LandingPageComponent implements OnInit {
   tempData: any;
   navmenus: any;
   gridDesktop: GridConfig;
-
+  gridTablet: GridConfig;
+  gridMobile: GridConfig;
   facebookLoginData: any;
   navBarData: any;
   constructor(private http: HttpClient, private _gridlayoutService: AmexioGridLayoutService) {
     this.createLayouts();
     // Create the Layouts
     this._gridlayoutService.createLayout(this.gridDesktop);
+    this._gridlayoutService.createLayout(this.gridTablet);
+    this._gridlayoutService.createLayout(this.gridMobile);
+
 
   }
 
@@ -70,10 +74,28 @@ export class LandingPageComponent implements OnInit {
 
 
   createLayouts() {
-    this.gridDesktop = new GridConfig('LayoutSample1', GridConstants.Desktop)
-      .addlayout(['gridmenu1', 'gridmenu2', 'gridmenu3', 'gridlogin'])
-      .addlayout(['gridmenu4', 'gridmenu5', 'gridmenu6', 'gridlogin1']);
+    this.gridDesktop = new GridConfig('page1', GridConstants.Desktop)
+      .addlayout(['gridDemo1', 'gridDemo1', 'gridLabel', 'gridLabel', 'gridLabel', 'gridLabel'])
+      .addlayout(['gridDemo1', 'gridDemo1', 'gridDemo2', 'gridDemo2', 'gridDemo3', 'gridDemo3']);
+    // .addlayout(['gridDemo1', 'gridDemo2', 'gridDemo3']);
+    this.gridTablet = new GridConfig('page1', GridConstants.Tablet)
+      .addlayout(['gridDemo1', 'gridDemo1', 'gridLabel', 'gridLabel', 'gridLabel', 'gridLabel'])
+      .addlayout(['gridDemo1', 'gridDemo1', 'gridDemo2', 'gridDemo2', 'gridDemo2', 'gridDemo2'])
+      .addlayout(['gridDemo1', 'gridDemo1', 'gridDemo3', 'gridDemo3', 'gridDemo3', 'gridDemo3']);
 
+    // .addlayout(['gridDemo1', 'gridDemo2', 'gridDemo3'])
+    // .addlayout(['gridDemo1', 'gridDemo2', 'gridDemo3'])
+    // .addlayout(['gridDemo1', 'gridDemo2', 'gridDemo3']);
+    this.gridMobile = new GridConfig('page1', GridConstants.Mobile)
+      .addlayout(['gridDemo1', 'gridDemo1', 'gridDemo1', 'gridDemo1', 'gridDemo1', 'gridDemo1'])
+      .addlayout(['gridLabel', 'gridLabel', 'gridLabel', 'gridLabel', 'gridLabel', 'gridLabel'])
+      .addlayout(['gridDemo2', 'gridDemo2', 'gridDemo2', 'gridDemo2', 'gridDemo2', 'gridDemo2'])
+      .addlayout(['gridDemo3', 'gridDemo3', 'gridDemo3', 'gridDemo3', 'gridDemo3', 'gridDemo3']);
+
+
+    // .addlayout(['gridDemo1', 'gridDemo1', 'gridDemo1'])
+    // .addlayout(['gridDemo2', 'gridDemo2', 'gridDemo2'])
+    // .addlayout(['gridDemo3', 'gridDemo3', 'gridDemo3']);
   }
 
   onLoginClick(data: any) {
