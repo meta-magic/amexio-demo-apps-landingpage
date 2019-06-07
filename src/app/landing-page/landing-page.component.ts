@@ -34,6 +34,23 @@ export class LandingPageComponent implements OnInit {
   gridDesktop: GridConfig;
   gridTablet: GridConfig;
   gridMobile: GridConfig;
+
+  gridDesktopPage2: GridConfig;
+  gridTabletPage2: GridConfig;
+  gridMobilePage2: GridConfig;
+
+  gridDesktopPage3: GridConfig;
+  gridTabletPage3: GridConfig;
+  gridMobilePage3: GridConfig;
+
+  gridDesktopPage4: GridConfig;
+  gridTabletPage4: GridConfig;
+  gridMobilePage4: GridConfig;
+
+  gridDesktopPage5: GridConfig;
+  gridTabletPage5: GridConfig;
+  gridMobilePage5: GridConfig;
+
   facebookLoginData: any;
   navBarData: any;
   constructor(private http: HttpClient, private _gridlayoutService: AmexioGridLayoutService) {
@@ -43,7 +60,21 @@ export class LandingPageComponent implements OnInit {
     this._gridlayoutService.createLayout(this.gridTablet);
     this._gridlayoutService.createLayout(this.gridMobile);
 
+    this._gridlayoutService.createLayout(this.gridDesktopPage2);
+    this._gridlayoutService.createLayout(this.gridTabletPage2);
+    this._gridlayoutService.createLayout(this.gridMobilePage2);
 
+    this._gridlayoutService.createLayout(this.gridDesktopPage3);
+    this._gridlayoutService.createLayout(this.gridTabletPage3);
+    this._gridlayoutService.createLayout(this.gridMobilePage3);
+
+    // this._gridlayoutService.createLayout(this.gridDesktopPage4);
+    // this._gridlayoutService.createLayout(this.gridTabletPage4);
+    // this._gridlayoutService.createLayout(this.gridMobilePage4);
+
+    this._gridlayoutService.createLayout(this.gridDesktopPage5);
+    this._gridlayoutService.createLayout(this.gridTabletPage5);
+    this._gridlayoutService.createLayout(this.gridMobilePage5);
   }
 
   ngOnInit() {
@@ -74,18 +105,16 @@ export class LandingPageComponent implements OnInit {
 
 
   createLayouts() {
+    // PAGE 1
     this.gridDesktop = new GridConfig('page1', GridConstants.Desktop)
       .addlayout(['gridDemo1', 'gridDemo1', 'gridLabel', 'gridLabel', 'gridLabel', 'gridLabel'])
       .addlayout(['gridDemo1', 'gridDemo1', 'gridDemo2', 'gridDemo2', 'gridDemo3', 'gridDemo3']);
-    // .addlayout(['gridDemo1', 'gridDemo2', 'gridDemo3']);
+
     this.gridTablet = new GridConfig('page1', GridConstants.Tablet)
       .addlayout(['gridDemo1', 'gridDemo1', 'gridLabel', 'gridLabel', 'gridLabel', 'gridLabel'])
       .addlayout(['gridDemo1', 'gridDemo1', 'gridDemo2', 'gridDemo2', 'gridDemo2', 'gridDemo2'])
       .addlayout(['gridDemo1', 'gridDemo1', 'gridDemo3', 'gridDemo3', 'gridDemo3', 'gridDemo3']);
 
-    // .addlayout(['gridDemo1', 'gridDemo2', 'gridDemo3'])
-    // .addlayout(['gridDemo1', 'gridDemo2', 'gridDemo3'])
-    // .addlayout(['gridDemo1', 'gridDemo2', 'gridDemo3']);
     this.gridMobile = new GridConfig('page1', GridConstants.Mobile)
       .addlayout(['gridDemo1', 'gridDemo1', 'gridDemo1', 'gridDemo1', 'gridDemo1', 'gridDemo1'])
       .addlayout(['gridLabel', 'gridLabel', 'gridLabel', 'gridLabel', 'gridLabel', 'gridLabel'])
@@ -93,10 +122,71 @@ export class LandingPageComponent implements OnInit {
       .addlayout(['gridDemo3', 'gridDemo3', 'gridDemo3', 'gridDemo3', 'gridDemo3', 'gridDemo3']);
 
 
-    // .addlayout(['gridDemo1', 'gridDemo1', 'gridDemo1'])
-    // .addlayout(['gridDemo2', 'gridDemo2', 'gridDemo2'])
-    // .addlayout(['gridDemo3', 'gridDemo3', 'gridDemo3']);
+    // PAGE 2
+    this.gridDesktopPage2 = new GridConfig('page2', GridConstants.Desktop)
+      .addlayout(['gridpage2title', 'gridpage2title', 'gridpage2title', 'gridpage2title', 'gridpage2title', 'gridpage2title'])
+      .addlayout(['gridpage2view1', 'gridpage2view1', 'gridpage2view2', 'gridpage2view2', 'gridpage2view3', 'gridpage2view3']);
+
+    this.gridTabletPage2 = new GridConfig('page2', GridConstants.Tablet)
+      .addlayout(['gridpage2title', 'gridpage2title', 'gridpage2title', 'gridpage2title', 'gridpage2title', 'gridpage2title'])
+      .addlayout(['gridpage2view1', 'gridpage2view1', 'gridpage2view1', 'gridpage2view2', 'gridpage2view2', 'gridpage2view2'])
+      .addlayout(['gridpage2view3', 'gridpage2view3', 'gridpage2view3', 'gridpage2view3', 'gridpage2view3', 'gridpage2view3']);
+
+    this.gridMobilePage2 = new GridConfig('page2', GridConstants.Mobile)
+      .addlayout(['gridpage2title', 'gridpage2title', 'gridpage2title', 'gridpage2title', 'gridpage2title', 'gridpage2title'])
+      .addlayout(['gridpage2view1', 'gridpage2view1', 'gridpage2view1', 'gridpage2view1', 'gridpage2view1', 'gridpage2view1'])
+      .addlayout(['gridpage2view2', 'gridpage2view2', 'gridpage2view2', 'gridpage2view2', 'gridpage2view2', 'gridpage2view2'])
+      .addlayout(['gridpage2view3', 'gridpage2view3', 'gridpage2view3', 'gridpage2view3', 'gridpage2view3', 'gridpage2view3']);
+
+
+    // PAGE 3
+    this.gridDesktopPage3 = new GridConfig('page3', GridConstants.Desktop)
+      .addlayout(['gridpage3title', 'gridpage3title', 'gridpage3title', 'gridpage3title', 'gridpage3title', 'gridpage3title'])
+      .addlayout(['gridpage3menu1', 'gridpage3menu1', 'gridpage3menu2', 'gridpage3menu2', 'gridpage3menu3', 'gridpage3menu3']);
+
+    this.gridTabletPage3 = new GridConfig('page3', GridConstants.Tablet)
+      .addlayout(['gridpage3title', 'gridpage3title', 'gridpage3title', 'gridpage3title', 'gridpage3title', 'gridpage3title'])
+      .addlayout(['gridpage3menu1', 'gridpage3menu1', 'gridpage3menu1', 'gridpage3menu2', 'gridpage3menu2', 'gridpage3menu2'])
+      .addlayout(['gridpage3menu3', 'gridpage3menu3', 'gridpage3menu3', 'gridpage3menu3', 'gridpage3menu3', 'gridpage3menu3']);
+
+    this.gridMobilePage3 = new GridConfig('page3', GridConstants.Mobile)
+      .addlayout(['gridpage3title', 'gridpage3title', 'gridpage3title', 'gridpage3title', 'gridpage3title', 'gridpage3title'])
+      .addlayout(['gridpage3menu1', 'gridpage3menu1', 'gridpage3menu1', 'gridpage3menu1', 'gridpage3menu1', 'gridpage3menu1'])
+      .addlayout(['gridpage3menu2', 'gridpage3menu2', 'gridpage3menu2', 'gridpage3menu2', 'gridpage3menu2', 'gridpage3menu2'])
+      .addlayout(['gridpage3menu3', 'gridpage3menu3', 'gridpage3menu3', 'gridpage3menu3', 'gridpage3menu3', 'gridpage3menu3']);
+
+
+    // PAGE 4
+
+    //  this.gridDesktopPage4 = new GridConfig('page4', GridConstants.Desktop)
+    //       .addlayout(['gridpage4demo1', 'gridpage4demo1', 'gridpage4demo1', 'gridpage4demo1', 'gridpage4demo1', 'gridpage4demo1']);
+
+    //     this.gridTabletPage4 = new GridConfig('page4', GridConstants.Tablet)
+    //       .addlayout(['gridpage4demo1', 'gridpage4demo1', 'gridpage4demo1', 'gridpage4demo1', 'gridpage4demo1', 'gridpage4demo1'])
+
+    //     this.gridMobilePage4 = new GridConfig('page4', GridConstants.Mobile)
+    //       .addlayout(['gridpage4demo1', 'gridpage4demo1', 'gridpage4demo1', 'gridpage4demo1', 'gridpage4demo1', 'gridpage4demo1'])
+
+
+    // PAGE 5
+
+    this.gridDesktopPage5 = new GridConfig('page5', GridConstants.Desktop)
+      .addlayout(['gridpage5title', 'gridpage5title', 'gridpage5title', 'gridpage5title', 'gridpage5title', 'gridpage5title'])
+      .addlayout(['gridpage5app1', 'gridpage5app1', 'gridpage5app2', 'gridpage5app2', 'gridpage5app3', 'gridpage5app3']);
+
+    this.gridTabletPage5 = new GridConfig('page5', GridConstants.Tablet)
+      .addlayout(['gridpage5title', 'gridpage5title', 'gridpage5title', 'gridpage5title', 'gridpage5title', 'gridpage5title'])
+      .addlayout(['gridpage5app1', 'gridpage5app1', 'gridpage5app1', 'gridpage5app2', 'gridpage5app2', 'gridpage5app2'])
+      .addlayout(['gridpage5app3', 'gridpage5app3', 'gridpage5app3', 'gridpage5app3', 'gridpage5app3', 'gridpage5app3']);
+
+    this.gridMobilePage5 = new GridConfig('page5', GridConstants.Mobile)
+      .addlayout(['gridpage5title', 'gridpage5title', 'gridpage5title', 'gridpage5title', 'gridpage5title', 'gridpage5title'])
+      .addlayout(['gridpage5app1', 'gridpage5app1', 'gridpage5app1', 'gridpage5app1', 'gridpage5app1', 'gridpage5app1'])
+      .addlayout(['gridpage5app2', 'gridpage5app2', 'gridpage5app2', 'gridpage5app2', 'gridpage5app2', 'gridpage5app2'])
+      .addlayout(['gridpage5app3', 'gridpage5app3', 'gridpage5app3', 'gridpage5app3', 'gridpage5app3', 'gridpage5app3']);
+
   }
+
 
   onLoginClick(data: any) {
     this.facebookLoginData = data;
