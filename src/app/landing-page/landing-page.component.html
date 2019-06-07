@@ -8,7 +8,7 @@
 
     <amexio-viewport-content-body>
 
-      <amexio-nav [transparent]="true" [enable-side-nav-position]="true" [title]="'Amexio Demo App'"
+      <amexio-nav [transparent]="true" [enable-side-nav-position]="true" [title]="'Amexio Showcase'"
         [logo]="'assets/images/amexio-logo.png'">
         <amexio-nav-item position-right [title]="'Training'" [icon]="'fa fa-yelp fa-fw fa-lg'" [type]="'link'"
           style="cursor: pointer;">
@@ -22,12 +22,11 @@
       </amexio-nav>
       <br>
       <br>
-      <amexio-layout-grid  style="padding: 0px 10px 0px 10px;" [layout]="'page1'" >
+      <amexio-layout-grid style="padding: 0px 10px 0px 10px;" [layout]="'page1'">
         <amexio-grid-item [name]="'gridDemo1'">
 
-          <amexio-menu-ce [menu-positioning]="'left'" 
-          [font]="'sans-serif'"
-           [animation-type]="4" [data]="tempData" [size]="50">
+          <amexio-menu-ce [menu-positioning]="'left'" [font]="'sans-serif'" [animation-type]="4" [data]="tempData"
+            [size]="50">
           </amexio-menu-ce>
         </amexio-grid-item>
 
@@ -103,7 +102,7 @@
     <amexio-viewport-content-body [scrollable]="false">
       <br>
       <br>
-      <amexio-layout-grid  style="padding: 0px 10px 0px 10px;" [layout]="'page2'">
+      <amexio-layout-grid style="padding: 0px 10px 0px 10px;" [layout]="'page2'">
         <amexio-grid-item [name]="'gridpage2title'">
           <amexio-label size="large-bold" [font-color]="'white'">
             Creative Viewport Demos
@@ -197,7 +196,7 @@
     <amexio-viewport-content-body>
       <!--  Creative Menu Demo -->
       <br>
-      <amexio-layout-grid  style="padding: 0px 10px 0px 10px;" [layout]="'page3'">
+      <amexio-layout-grid style="padding: 0px 10px 0px 10px;" [layout]="'page3'">
         <amexio-grid-item [name]="'gridpage3title'">
           <amexio-label size="large-bold" [font-color]="'white'">
             Creative Menu Demos
@@ -302,7 +301,7 @@
             <amexio-header-ce amexioColorPalette [gradient]="true" [color-palette]="'classic'" [height]="'35px'"
               [border-bottom]="true" [align]="'start'" [color]="'white'" [background]="'rgba(218,105,114,0.3)'">
               <amexio-label [size]="'medium-bold'">
-                TecM Flix
+                TechMFlix
               </amexio-label>
             </amexio-header-ce>
 
@@ -345,7 +344,7 @@
       <br>
       <!-- gridpage5app1 -->
 
-      <amexio-layout-grid  style="padding: 0px 10px 0px 10px;" [layout]="'page5'">
+      <amexio-layout-grid style="padding: 0px 10px 0px 10px;" [layout]="'page5'">
         <amexio-grid-item [name]="'gridpage5title'">
           <amexio-label size="large-bold" [font-color]="'black'">
             Standard Edition Demos
@@ -356,7 +355,7 @@
             <amexio-header-ce amexioColorPalette [gradient]="true" [color-palette]="'random'" [height]="'35px'"
               align="start">
               <amexio-label [size]="'medium-bold'">
-                U.S. Election APP
+                U.S. Election App
               </amexio-label>
             </amexio-header-ce>
             <amexio-body-ce>
@@ -364,7 +363,7 @@
               </amexio-image>
 
               <p>
-                  U.S election Demo Application using multiple component of Amexio and Amexio tags.
+                U.S election Demo Application using multiple component of Amexio and Amexio tags.
               </p>
             </amexio-body-ce>
             <amexio-action-ce align="center" [border-top]="true">
@@ -379,7 +378,7 @@
             <amexio-header-ce amexioColorPalette [gradient]="true" [color-palette]="'random'" [color]="'white'"
               [color]="'black'" [height]="'35px'" align="start">
               <amexio-label [size]="'medium-bold'">
-                Shopping APP
+                Shopping App
               </amexio-label>
             </amexio-header-ce>
             <amexio-body-ce>
@@ -402,7 +401,7 @@
             <amexio-header-ce [height]="'35px'" amexioColorPalette [gradient]="true"
               [color-palette]="'amexio-theme-color4  '" align="start">
               <amexio-label [size]="'medium-bold'">
-                Insurance APP
+                Insurance App
               </amexio-label>
             </amexio-header-ce>
             <amexio-body-ce>
@@ -421,7 +420,32 @@
 
           </amexio-card-ce>
         </amexio-grid-item>
+        <amexio-grid-item [name]="'gridpage5app4'">
+          <amexio-card-ce [align]="'center'" [color]="'white'" [background]="'rgba(10,140,140,0.9)'">
+            <amexio-header-ce [height]="'35px'" amexioColorPalette [gradient]="true" [color-palette]="'random'"
+              align="start">
+              <amexio-label [size]="'medium-bold'">
+                Theme App
+              </amexio-label>
+            </amexio-header-ce>
+            <amexio-body-ce>
+
+              <amexio-image class="homepage-cursor" [path]="'assets/viewport/theme.jpg'">
+              </amexio-image>
+              <p>
+                Theme App Demo Application using multiple component of Amexio and Amexio tags.
+              </p>
+
+            </amexio-body-ce>
+            <amexio-action-ce align="center" [border-top]="true">
+              <amexio-button [label]="'Demo'" (onClick)="onAmexioDemoClick()" [type]="'theme-color'" [tooltip]="'Demo'">
+              </amexio-button>
+            </amexio-action-ce>
+
+          </amexio-card-ce>
+        </amexio-grid-item>
       </amexio-layout-grid>
+
 
     </amexio-viewport-content-body>
   </amexio-viewport-content>

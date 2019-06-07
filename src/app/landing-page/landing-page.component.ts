@@ -29,6 +29,8 @@ export class LandingPageComponent implements OnInit {
   DEMO_SHOPPING_URL = 'https://demo.amexio.org/se/shoppingportal/#/home';
   DEMO_POLICY_URL = 'https://demo.amexio.org/se/insuranceportal/#/home';
   DEMO_ELECTION_URL = 'https://demo.amexio.org/se/us-election/';
+
+  DEMO_THEME_URL = 'https://demo.amexio.org/se/v5.12/index.html#/home';
   tempData: any;
   navmenus: any;
   gridDesktop: GridConfig;
@@ -171,19 +173,20 @@ export class LandingPageComponent implements OnInit {
     // PAGE 5
 
     this.gridDesktopPage5 = new GridConfig('page5', GridConstants.Desktop)
-      .addlayout(['gridpage5title', 'gridpage5title', 'gridpage5title', 'gridpage5title', 'gridpage5title', 'gridpage5title'])
-      .addlayout(['gridpage5app1', 'gridpage5app1', 'gridpage5app2', 'gridpage5app2', 'gridpage5app3', 'gridpage5app3']);
+      .addlayout(['gridpage5title', 'gridpage5title', 'gridpage5title', 'gridpage5title'])
+      .addlayout(['gridpage5app1', 'gridpage5app2', 'gridpage5app3', 'gridpage5app4']);
 
     this.gridTabletPage5 = new GridConfig('page5', GridConstants.Tablet)
-      .addlayout(['gridpage5title', 'gridpage5title', 'gridpage5title', 'gridpage5title', 'gridpage5title', 'gridpage5title'])
-      .addlayout(['gridpage5app1', 'gridpage5app1', 'gridpage5app1', 'gridpage5app2', 'gridpage5app2', 'gridpage5app2'])
-      .addlayout(['gridpage5app3', 'gridpage5app3', 'gridpage5app3', 'gridpage5app3', 'gridpage5app3', 'gridpage5app3']);
+      .addlayout(['gridpage5title', 'gridpage5title', 'gridpage5title', 'gridpage5title'])
+      .addlayout(['gridpage5app1', 'gridpage5app1', 'gridpage5app2', 'gridpage5app2'])
+      .addlayout(['gridpage5app3', 'gridpage5app3', 'gridpage5app4', 'gridpage5app4']);
 
     this.gridMobilePage5 = new GridConfig('page5', GridConstants.Mobile)
-      .addlayout(['gridpage5title', 'gridpage5title', 'gridpage5title', 'gridpage5title', 'gridpage5title', 'gridpage5title'])
-      .addlayout(['gridpage5app1', 'gridpage5app1', 'gridpage5app1', 'gridpage5app1', 'gridpage5app1', 'gridpage5app1'])
-      .addlayout(['gridpage5app2', 'gridpage5app2', 'gridpage5app2', 'gridpage5app2', 'gridpage5app2', 'gridpage5app2'])
-      .addlayout(['gridpage5app3', 'gridpage5app3', 'gridpage5app3', 'gridpage5app3', 'gridpage5app3', 'gridpage5app3']);
+      .addlayout(['gridpage5title', 'gridpage5title', 'gridpage5title', 'gridpage5title'])
+      .addlayout(['gridpage5app1', 'gridpage5app1', 'gridpage5app1', 'gridpage5app1'])
+      .addlayout(['gridpage5app2', 'gridpage5app2', 'gridpage5app2', 'gridpage5app2'])
+      .addlayout(['gridpage5app3', 'gridpage5app3', 'gridpage5app3', 'gridpage5app3'])
+      .addlayout(['gridpage5app4', 'gridpage5app4', 'gridpage5app4', 'gridpage5app4']);
 
   }
 
@@ -240,6 +243,10 @@ export class LandingPageComponent implements OnInit {
   onElectionDemoClick() {
     window.open(this.DEMO_ELECTION_URL);
 
+
+  }
+  onAmexioDemoClick() {
+    window.open(this.DEMO_THEME_URL);
 
   }
 }
