@@ -31,6 +31,7 @@ after_success:
   - codecov
   - rm -rf docs/*
   - cp -rf /home/travis/build/meta-magic/amexio-demo-apps-landingpage/dist/amexio-demo-apps-landingpage/* docs/
+  - cp -rf CNAME docs/
   - git add docs
   - git commit -m "[skip travis]  date"
   - if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then git push "https://deepali-arvind:${GITHUB_TOKEN}@github.com/${GITHUB_REPO}.git" HEAD:master; fi
