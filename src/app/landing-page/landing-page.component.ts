@@ -197,15 +197,12 @@ export class LandingPageComponent implements OnInit {
 
     // PAGE 6
     this.gridDesktopPage6 = new GridConfig('page6', GridConstants.Desktop)
-      .addlayout(['gridpage6title', 'gridpage6title', 'gridpage6title', 'gridpage6title'])
       .addlayout(['gridpage6app1', 'gridpage6app1', 'gridpage6app2', 'gridpage6app2'])
 
     this.gridTabletPage6 = new GridConfig('page6', GridConstants.Tablet)
-      .addlayout(['gridpage6title', 'gridpage6title', 'gridpage6title', 'gridpage6title'])
       .addlayout(['gridpage6app1', 'gridpage6app1', 'gridpage6app2', 'gridpage6app2'])
 
     this.gridMobilePage6 = new GridConfig('page6', GridConstants.Mobile)
-      .addlayout(['gridpage6title', 'gridpage6title', 'gridpage6title', 'gridpage6title'])
       .addlayout(['gridpage6app1', 'gridpage6app1', 'gridpage6app1', 'gridpage6app1'])
       .addlayout(['gridpage6app2', 'gridpage6app2', 'gridpage6app2', 'gridpage6app2'])
 
