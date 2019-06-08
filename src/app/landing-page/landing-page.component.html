@@ -16,7 +16,7 @@
         <amexio-nav-item position-right [title]="'Engage'" [icon]="'fa fa-retweet fa-fw fa-lg'" [type]="'link'"
           style="cursor: pointer;">
         </amexio-nav-item>
-        <amexio-nav-item position-right [title]="'About'" [icon]="'fa fa-address-book fa-fw fa-lg'" [type]="'link'"
+        <amexio-nav-item  position-right [title]="'About'" [icon]="'fa fa-address-book fa-fw fa-lg'" [type]="'link'"
           style="cursor: pointer;">
         </amexio-nav-item>
       </amexio-nav>
@@ -285,52 +285,70 @@
   <!-- image 4 -->
   <amexio-viewport-content [scrollable]="false">
 
-    <amexio-viewport-background>
-      <amexio-image [path]="'assets/images/techm.jpg'"></amexio-image>
-    </amexio-viewport-background>
-
-    <amexio-viewport-content-body>
-      <br>
-      <amexio-row>
-        <amexio-column size="2" fit="false">
-        </amexio-column>
-        <amexio-column [size]="8" [fit]="true">
-
-
-          <amexio-card-ce [color]="'white'" [background]="'rgba(19,72,80,0.7)'">
-            <amexio-header-ce amexioColorPalette [gradient]="true" [color-palette]="'classic'" [height]="'35px'"
-              [border-bottom]="true" [align]="'start'" [color]="'white'" [background]="'rgba(218,105,114,0.3)'">
-              <amexio-label [size]="'medium-bold'">
-                TechMFlix
-              </amexio-label>
-            </amexio-header-ce>
-
-
-            <amexio-body-ce>
-              <amexio-image class="homepage-cursor" [path]="'assets/images/tech.jpg'">
-              </amexio-image>
-              <p>
-                Netflix chronicles the rise of the cocaine trade in Colombia and the gripping real-life stories of drug
-                kingpins of the late 80s in this raw, gritty original series.
-              </p>
-
-            </amexio-body-ce>
-            <amexio-action-ce align="center" [border-top]="true">
-              <amexio-button [label]="'Demo'" (onClick)="onDemoTechMClick()" [type]="'theme-color'" [tooltip]="'BUY'">
-              </amexio-button>
-            </amexio-action-ce>
-          </amexio-card-ce>
-
-
-
-        </amexio-column>
-        <amexio-column size="2" fit="false">
-        </amexio-column>
-      </amexio-row>
-
-    </amexio-viewport-content-body>
-
-  </amexio-viewport-content>
+      <amexio-viewport-background>
+        <amexio-image [path]="'assets/images/techm.jpg'"></amexio-image>
+      </amexio-viewport-background>
+  
+      <amexio-viewport-content-body>
+        <br>
+        <amexio-layout-grid style="padding: 0px 10px 0px 10px;" [layout]="'page4'">
+          <amexio-grid-item [name]="'gridpage4demo1'">
+  
+  
+            <amexio-card-ce [color]="'white'" [background]="'rgba(19,72,80,0.7)'">
+              <amexio-header-ce amexioColorPalette [gradient]="true" [color-palette]="'classic'" [height]="'35px'"
+                [border-bottom]="true" [align]="'start'" [color]="'white'" [background]="'rgba(218,105,114,0.3)'">
+                <amexio-label [size]="'medium-bold'">
+                  TechMFlix
+                </amexio-label>
+              </amexio-header-ce>
+  
+  
+              <amexio-body-ce>
+                <amexio-image class="homepage-cursor" [path]="'assets/images/tech.jpg'">
+                </amexio-image>
+                <p>
+                  Netflix chronicles the rise of the cocaine trade in Colombia and the gripping real-life stories of drug
+                  kingpins of the late 80s in this raw.
+                </p>
+  
+              </amexio-body-ce>
+              <amexio-action-ce align="center" [border-top]="true">
+                <amexio-button [label]="'Demo'" (onClick)="onDemoTechMClick()" [type]="'theme-color'" [tooltip]="'BUY'">
+                </amexio-button>
+              </amexio-action-ce>
+            </amexio-card-ce>
+          </amexio-grid-item>
+  
+          <amexio-grid-item [name]="'gridpage4demo2'">
+            <amexio-card-ce [color]="'white'" [background]="'rgba(19,72,80,0.7)'">
+              <amexio-header-ce amexioColorPalette [gradient]="true" [color-palette]="'random'" [height]="'35px'"
+                [border-bottom]="true" [align]="'start'" [color]="'white'" [background]="'rgba(218,105,114,0.3)'">
+                <amexio-label [size]="'medium-bold'">
+                  Virtual Scroller Demo
+                </amexio-label>
+              </amexio-header-ce>
+              <amexio-body-ce>
+                <amexio-image class="homepage-cursor" [path]="'assets/images/virtualDemo.jpg'">
+                </amexio-image>
+                <p>
+                    Amexio virtual scroller displays a small subset of records just enough to fill the viewport and uses the same DOM elements as the user scrolls.
+                </p>
+  
+              </amexio-body-ce>
+              <amexio-action-ce align="center" [border-top]="true">
+                <amexio-button [label]="'Demo'" (onClick)="onVirtualScrollDemoClick()" [type]="'theme-color'" [tooltip]="'BUY'">
+                </amexio-button>
+              </amexio-action-ce>
+            </amexio-card-ce>
+          </amexio-grid-item>
+        </amexio-layout-grid>
+  
+  
+  
+      </amexio-viewport-content-body>
+  
+    </amexio-viewport-content>
   <!-- image 5 -->
 
   <amexio-viewport-content [scrollable]="false">
@@ -372,7 +390,6 @@
             </amexio-action-ce>
           </amexio-card-ce>
         </amexio-grid-item>
-
         <amexio-grid-item [name]="'gridpage5app2'">
           <amexio-card-ce [align]="'center'" [color]="'white'" [background]="'rgba(10,140,140,0.9)'">
             <amexio-header-ce amexioColorPalette [gradient]="true" [color-palette]="'random'" [color]="'white'"
@@ -396,58 +413,82 @@
 
           </amexio-card-ce>
         </amexio-grid-item>
-        <amexio-grid-item [name]="'gridpage5app3'">
-          <amexio-card-ce [align]="'center'" [color]="'white'" [background]="'rgba(10,140,140,0.9)'">
-            <amexio-header-ce [height]="'35px'" amexioColorPalette [gradient]="true"
-              [color-palette]="'amexio-theme-color4  '" align="start">
-              <amexio-label [size]="'medium-bold'">
-                Insurance App
-              </amexio-label>
-            </amexio-header-ce>
-            <amexio-body-ce>
-
-              <amexio-image class="homepage-cursor" [path]="'assets/images/policy.jpg'">
-              </amexio-image>
-              <p>
-                Digital policy Demo Application using multiple component of Amexio and Amexio tags.
-              </p>
-
-            </amexio-body-ce>
-            <amexio-action-ce align="center" [border-top]="true">
-              <amexio-button [label]="'Demo'" (onClick)="onPolicyDemoClick()" [type]="'theme-color'" [tooltip]="'Demo'">
-              </amexio-button>
-            </amexio-action-ce>
-
-          </amexio-card-ce>
-        </amexio-grid-item>
-        <amexio-grid-item [name]="'gridpage5app4'">
-          <amexio-card-ce [align]="'center'" [color]="'white'" [background]="'rgba(10,140,140,0.9)'">
-            <amexio-header-ce [height]="'35px'" amexioColorPalette [gradient]="true" [color-palette]="'random'"
-              align="start">
-              <amexio-label [size]="'medium-bold'">
-                Theme App
-              </amexio-label>
-            </amexio-header-ce>
-            <amexio-body-ce>
-
-              <amexio-image class="homepage-cursor" [path]="'assets/viewport/theme.jpg'">
-              </amexio-image>
-              <p>
-                Theme App Demo Application using multiple component of Amexio and Amexio tags.
-              </p>
-
-            </amexio-body-ce>
-            <amexio-action-ce align="center" [border-top]="true">
-              <amexio-button [label]="'Demo'" (onClick)="onAmexioDemoClick()" [type]="'theme-color'" [tooltip]="'Demo'">
-              </amexio-button>
-            </amexio-action-ce>
-
-          </amexio-card-ce>
-        </amexio-grid-item>
+       
       </amexio-layout-grid>
 
 
     </amexio-viewport-content-body>
   </amexio-viewport-content>
 
+  <!--  image 6 --><amexio-viewport-content [scrollable]="false">
+
+    <amexio-viewport-background>
+        <amexio-image [path]="'assets/images/se3.jpg'"></amexio-image>
+      </amexio-viewport-background>
+  
+      <amexio-viewport-content-body>
+        <br>
+        <br>
+        <!-- gridpage5app1 -->
+  
+        <amexio-layout-grid style="padding: 0px 10px 0px 10px;" [layout]="'page6'">
+          <amexio-grid-item [name]="'gridpage6title'">
+            <amexio-label size="large-bold" [font-color]="'black'">
+              Standard Edition Demos
+            </amexio-label>
+          </amexio-grid-item>
+          <amexio-grid-item [name]="'gridpage6app1'">
+            <amexio-card-ce [align]="'center'" [color]="'white'" [background]="'rgba(40,49,58,0.9)'">
+              <amexio-header-ce [height]="'35px'" amexioColorPalette [gradient]="true"
+                [color-palette]="'amexio-theme-color4  '" align="start">
+                <amexio-label [size]="'medium-bold'">
+                  Insurance App
+                </amexio-label>
+              </amexio-header-ce>
+              <amexio-body-ce>
+  
+                <amexio-image class="homepage-cursor" [path]="'assets/images/policy.jpg'">
+                </amexio-image>
+                <p>
+                  Digital policy Demo Application using multiple component of Amexio and Amexio tags.
+                </p>
+  
+              </amexio-body-ce>
+              <amexio-action-ce align="center" [border-top]="true">
+                <amexio-button [label]="'Demo'" (onClick)="onPolicyDemoClick()" [type]="'theme-color'" [tooltip]="'Demo'">
+                </amexio-button>
+              </amexio-action-ce>
+  
+            </amexio-card-ce>
+          </amexio-grid-item>
+          <amexio-grid-item [name]="'gridpage6app2'">
+            <amexio-card-ce [align]="'center'" [color]="'white'" [background]="'rgba(40,49,58,0.9)'">
+              <amexio-header-ce [height]="'35px'" amexioColorPalette [gradient]="true" [color-palette]="'random'"
+                align="start">
+                <amexio-label [size]="'medium-bold'">
+                  Theme App
+                </amexio-label>
+              </amexio-header-ce>
+              <amexio-body-ce>
+  
+                <amexio-image class="homepage-cursor" [path]="'assets/viewport/theme.jpg'">
+                </amexio-image>
+                <p>
+                  Theme App Demo Application using multiple component of Amexio and Amexio tags.
+                </p>
+  
+              </amexio-body-ce>
+              <amexio-action-ce align="center" [border-top]="true">
+                <amexio-button [label]="'Demo'" (onClick)="onAmexioDemoClick()" [type]="'theme-color'" [tooltip]="'Demo'">
+                </amexio-button>
+              </amexio-action-ce>
+  
+            </amexio-card-ce>
+          </amexio-grid-item>
+        </amexio-layout-grid>
+  
+  
+      </amexio-viewport-content-body>
+    </amexio-viewport-content>
+  
 </amexio-viewport>

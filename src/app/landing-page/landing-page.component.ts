@@ -31,6 +31,7 @@ export class LandingPageComponent implements OnInit {
   DEMO_ELECTION_URL = 'https://demo.amexio.org/se/us-election/';
 
   DEMO_THEME_URL = 'https://demo.amexio.org/se/v5.12/index.html#/home';
+  DEMO_VIRTUAL_URL = 'https://meta-magic.github.io/amexio-virtualscroll-demo/#/sc';
   tempData: any;
   navmenus: any;
   gridDesktop: GridConfig;
@@ -53,6 +54,10 @@ export class LandingPageComponent implements OnInit {
   gridTabletPage5: GridConfig;
   gridMobilePage5: GridConfig;
 
+  gridDesktopPage6: GridConfig;
+  gridTabletPage6: GridConfig;
+  gridMobilePage6: GridConfig;
+
   facebookLoginData: any;
   navBarData: any;
   constructor(private http: HttpClient, private _gridlayoutService: AmexioGridLayoutService) {
@@ -70,13 +75,17 @@ export class LandingPageComponent implements OnInit {
     this._gridlayoutService.createLayout(this.gridTabletPage3);
     this._gridlayoutService.createLayout(this.gridMobilePage3);
 
-    // this._gridlayoutService.createLayout(this.gridDesktopPage4);
-    // this._gridlayoutService.createLayout(this.gridTabletPage4);
-    // this._gridlayoutService.createLayout(this.gridMobilePage4);
+    this._gridlayoutService.createLayout(this.gridDesktopPage4);
+    this._gridlayoutService.createLayout(this.gridTabletPage4);
+    this._gridlayoutService.createLayout(this.gridMobilePage4);
 
     this._gridlayoutService.createLayout(this.gridDesktopPage5);
     this._gridlayoutService.createLayout(this.gridTabletPage5);
     this._gridlayoutService.createLayout(this.gridMobilePage5);
+
+    this._gridlayoutService.createLayout(this.gridDesktopPage6);
+    this._gridlayoutService.createLayout(this.gridTabletPage6);
+    this._gridlayoutService.createLayout(this.gridMobilePage6);
   }
 
   ngOnInit() {
@@ -160,33 +169,45 @@ export class LandingPageComponent implements OnInit {
 
     // PAGE 4
 
-    //  this.gridDesktopPage4 = new GridConfig('page4', GridConstants.Desktop)
-    //       .addlayout(['gridpage4demo1', 'gridpage4demo1', 'gridpage4demo1', 'gridpage4demo1', 'gridpage4demo1', 'gridpage4demo1']);
+    this.gridDesktopPage4 = new GridConfig('page4', GridConstants.Desktop)
+      .addlayout(['gridpage4demo1', 'gridpage4demo1', 'gridpage4demo1', 'gridpage4demo2', 'gridpage4demo2', 'gridpage4demo2']);
 
-    //     this.gridTabletPage4 = new GridConfig('page4', GridConstants.Tablet)
-    //       .addlayout(['gridpage4demo1', 'gridpage4demo1', 'gridpage4demo1', 'gridpage4demo1', 'gridpage4demo1', 'gridpage4demo1'])
+    this.gridTabletPage4 = new GridConfig('page4', GridConstants.Tablet)
+      .addlayout(['gridpage4demo1', 'gridpage4demo1', 'gridpage4demo1', 'gridpage4demo2', 'gridpage4demo2', 'gridpage4demo2'])
 
-    //     this.gridMobilePage4 = new GridConfig('page4', GridConstants.Mobile)
-    //       .addlayout(['gridpage4demo1', 'gridpage4demo1', 'gridpage4demo1', 'gridpage4demo1', 'gridpage4demo1', 'gridpage4demo1'])
+    this.gridMobilePage4 = new GridConfig('page4', GridConstants.Mobile)
+      .addlayout(['gridpage4demo1', 'gridpage4demo1', 'gridpage4demo1', 'gridpage4demo1', 'gridpage4demo1', 'gridpage4demo1'])
+      .addlayout(['gridpage4demo2', 'gridpage4demo2', 'gridpage4demo2', 'gridpage4demo2', 'gridpage4demo2', 'gridpage4demo2'])
 
 
     // PAGE 5
 
     this.gridDesktopPage5 = new GridConfig('page5', GridConstants.Desktop)
       .addlayout(['gridpage5title', 'gridpage5title', 'gridpage5title', 'gridpage5title'])
-      .addlayout(['gridpage5app1', 'gridpage5app2', 'gridpage5app3', 'gridpage5app4']);
+      .addlayout(['gridpage5app1', 'gridpage5app1', 'gridpage5app2', 'gridpage5app2'])
 
     this.gridTabletPage5 = new GridConfig('page5', GridConstants.Tablet)
       .addlayout(['gridpage5title', 'gridpage5title', 'gridpage5title', 'gridpage5title'])
       .addlayout(['gridpage5app1', 'gridpage5app1', 'gridpage5app2', 'gridpage5app2'])
-      .addlayout(['gridpage5app3', 'gridpage5app3', 'gridpage5app4', 'gridpage5app4']);
 
     this.gridMobilePage5 = new GridConfig('page5', GridConstants.Mobile)
       .addlayout(['gridpage5title', 'gridpage5title', 'gridpage5title', 'gridpage5title'])
       .addlayout(['gridpage5app1', 'gridpage5app1', 'gridpage5app1', 'gridpage5app1'])
       .addlayout(['gridpage5app2', 'gridpage5app2', 'gridpage5app2', 'gridpage5app2'])
-      .addlayout(['gridpage5app3', 'gridpage5app3', 'gridpage5app3', 'gridpage5app3'])
-      .addlayout(['gridpage5app4', 'gridpage5app4', 'gridpage5app4', 'gridpage5app4']);
+
+    // PAGE 6
+    this.gridDesktopPage6 = new GridConfig('page6', GridConstants.Desktop)
+      .addlayout(['gridpage6title', 'gridpage6title', 'gridpage6title', 'gridpage6title'])
+      .addlayout(['gridpage6app1', 'gridpage6app1', 'gridpage6app2', 'gridpage6app2'])
+
+    this.gridTabletPage6 = new GridConfig('page6', GridConstants.Tablet)
+      .addlayout(['gridpage6title', 'gridpage6title', 'gridpage6title', 'gridpage6title'])
+      .addlayout(['gridpage6app1', 'gridpage6app1', 'gridpage6app2', 'gridpage6app2'])
+
+    this.gridMobilePage6 = new GridConfig('page6', GridConstants.Mobile)
+      .addlayout(['gridpage6title', 'gridpage6title', 'gridpage6title', 'gridpage6title'])
+      .addlayout(['gridpage6app1', 'gridpage6app1', 'gridpage6app1', 'gridpage6app1'])
+      .addlayout(['gridpage6app2', 'gridpage6app2', 'gridpage6app2', 'gridpage6app2'])
 
   }
 
@@ -220,33 +241,28 @@ export class LandingPageComponent implements OnInit {
   onViewportDemoThreeClick() {
     window.open(this.DEMO_SIX_URL);
   }
-
-
   onMenuDemoFirstClick() {
     window.open(this.DEMO_SEVEN_URL);
   }
   onMenuDemoSecondClick() {
     window.open(this.DEMO_EIGHT_URL);
   }
-
   onMenuDemoThreeClick() {
     window.open(this.DEMO_NINE_URL);
   }
-
   onPolicyDemoClick() {
     window.open(this.DEMO_POLICY_URL);
   }
   onShoppingDemoClick() {
     window.open(this.DEMO_SHOPPING_URL);
-
   }
   onElectionDemoClick() {
     window.open(this.DEMO_ELECTION_URL);
-
-
   }
   onAmexioDemoClick() {
     window.open(this.DEMO_THEME_URL);
-
+  }
+  onVirtualScrollDemoClick() {
+    window.open(this.DEMO_VIRTUAL_URL);
   }
 }
