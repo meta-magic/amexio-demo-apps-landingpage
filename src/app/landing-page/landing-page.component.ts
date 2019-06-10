@@ -93,8 +93,7 @@ export class LandingPageComponent implements OnInit {
     this.tempData = [
       {
         label: 'API',
-        "link": "https://amexio.tech/amexio-api"
-
+        "link": "https://api.amexio.org/"
       },
       {
         label: 'GITHUB',
