@@ -34,6 +34,7 @@ export class LandingPageComponent implements OnInit {
   DEMO_VIRTUAL_URL = 'https://meta-magic.github.io/amexio-virtualscroll-demo/#/sc';
   tempData: any;
   navmenus: any;
+  flag: boolean;
   gridDesktop: GridConfig;
   gridTablet: GridConfig;
   gridMobile: GridConfig;
@@ -89,29 +90,173 @@ export class LandingPageComponent implements OnInit {
   }
 
   ngOnInit() {
+
     this.tempData = [
       {
-        label: 'API'
+        label: 'API',
+        "link": "https://amexio.tech/amexio-api",
+        "flag": true
 
       },
       {
-        label: 'GITHUB'
+        label: 'GITHUB',
+        "link": "https://github.com/meta-magic/amexio.github.io"
+
 
       },
       {
-        label: 'NPM STATS'
+        label: 'NPM STATS',
+        "link": "https://www.npmstats.com/"
 
       },
       {
-        label: 'SUPPORT'
+        label: 'SUPPORT',
+        "link": "https://amexio.tech/support"
 
       },
       {
-        label: 'ROAD MAP'
+        label: 'ROAD MAP',
+        "link": "https://amexio.tech/roadmap"
 
       }
 
     ];
+
+    this.amexiotechmenus = [
+      {
+        "text": "Products",
+        "icon": "fa fa-snowflake-o fa-fw",
+        "submenus": [
+          {
+            "text": "Amexio API",
+            "link": "https://amexio.tech/amexio-api"
+          },
+          {
+            "text": "Amexio D3 Charts",
+            "link": " https://amexio.tech/amexio-d3-charts"
+          },
+          {
+            "text": "Amexio Canvas",
+            "link": "https://amexio.tech/amexio-canvas"
+          }, {
+            "text": "Amexio Colors",
+            "link": "https://amexio.tech/amexio-colors"
+          }, {
+            "text": "Amexio Plugins",
+            "link": "https://amexio.tech/amexio-plugins-1"
+          },
+          {
+            "text": "Amexio Demo Apps",
+            "link": "http://demo.amexio.tech/"
+          }
+        ]
+      },
+      {
+        "text": "Start Using",
+        "icon": "fa fa-television fa-fw",
+        "submenus": [
+          {
+            "text": "Roadmap",
+            "link": "https://amexio.tech/roadmap"
+          },
+          {
+            "text": "Support",
+            "link": "https://amexio.tech/support"
+          },
+          {
+            "text": "Pricing",
+            "link": "https://amexio.tech/pricing"
+          },
+          {
+            "text": "Quality-Assurance",
+            "link": "https://amexio.tech/quality-assurance"
+          },
+          {
+            "text": "Downloads",
+            "link": "https://amexio.tech/download"
+          },
+          {
+            "text": "License and Other Docs",
+            "link": "https://amexio.tech/license-and-other-docs-1"
+          },
+          {
+            "text": "Canvas Login (Beta)",
+            "link": "https://canvas.amexio.org/"
+          },
+          {
+            "text": "Subscribe ",
+            "link": "https://canvas.amexio.org/#/user/signup"
+          }
+        ]
+      },
+      {
+        "text": "Training",
+        "icon": "fa fa-user fa-fw",
+        "submenus": [
+          {
+            "text": "Component Example",
+            "link": "http://demo.amexio.tech/"
+          }, {
+            "text": "Amexio Training",
+            "link": "http://metaarivu.com/amexio-training"
+          }]
+      },
+      {
+        "text": "Case Studies",
+        "icon": "fa fa-clone fa-fw",
+        "submenus": [
+          { "text": "Shopping Portal", "link": "https://demo.amexio.org/se/shoppingportal/#/home" },
+          { "text": "US Election Results", "link": "https://demo.amexio.org/se/us-election/ " },
+          { "text": "Insurance Portal", "link": "https://demo.amexio.org/se/insuranceportal/#/home" },
+          { "text": "Movie Portal", "link": "https://demo.amexio.org/ee/" },
+          { "text": "NpmStats", "link": "https://www.npmstats.com/" },
+          { "text": "Creative Demo", "link": "https://cedemo.amexio.org/#/login" }
+        ]
+      },
+      {
+        "text": "Engage",
+        "submenus": [
+          {
+            "text": "Events",
+            "link": "https://metamagicglobal.com/events"
+          }, {
+            "text": "Forums",
+            "link": "http://forum.metamagicglobal.com/"
+          }, {
+            "text": "Blogs",
+            "link": "http://blog.metamagicglobal.com/"
+          }, {
+            "text": "Node Package Manager",
+            "link": "https://www.npmjs.com/package/amexio-ng-extensions"
+          }, {
+            "text": "GitHub - Source Code",
+            "link": "https://github.com/meta-magic/amexio.github.io"
+          }
+        ]
+      },
+      {
+        "text": "About Us",
+        "submenus": [
+          {
+            "text": "Contact",
+            "link": "https://metamagicglobal.com/contact"
+          }, {
+            "text": "Company",
+            "link": "http://www.metamagicglobal.com/company"
+          }, {
+            "text": "MetaMagic",
+            "link": "https://www.metamagicglobal.com/"
+          }
+        ]
+      }
+    ];
+  }
+
+
+  externalLink(event: any) {
+    if (event.data.node.link)
+      //this.document.location.href=event.data.node.link;
+      window.open(event.data.node.link, '_blank');
   }
 
 
@@ -205,7 +350,6 @@ export class LandingPageComponent implements OnInit {
     this.gridMobilePage6 = new GridConfig('page6', GridConstants.Mobile)
       .addlayout(['gridpage6app1', 'gridpage6app1', 'gridpage6app1', 'gridpage6app1'])
       .addlayout(['gridpage6app2', 'gridpage6app2', 'gridpage6app2', 'gridpage6app2'])
-
   }
 
 
@@ -213,7 +357,11 @@ export class LandingPageComponent implements OnInit {
     this.facebookLoginData = data;
   }
 
-
+  onMenuClick(data: any) {
+    if (data.link) {
+      window.open(data.link, '_blank');
+    }
+  }
 
   onDemoTechMClick() {
     window.open(this.DEMO_TECH_M_URL);

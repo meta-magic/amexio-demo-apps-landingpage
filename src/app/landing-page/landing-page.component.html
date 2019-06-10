@@ -8,17 +8,21 @@
 
     <amexio-viewport-content-body>
 
-      <amexio-nav [transparent]="true" [enable-side-nav-position]="true" [title]="'Amexio Showcase'"
+      <amexio-nav  [enable-side-nav-position]="true" [title]="'Amexio Showcase'"
         [logo]="'assets/images/amexio-logo.png'">
-        <amexio-nav-item position-right [title]="'Training'" [icon]="'fa fa-yelp fa-fw fa-lg'" [type]="'link'"
-          style="cursor: pointer;">
-        </amexio-nav-item>
-        <amexio-nav-item position-right [title]="'Engage'" [icon]="'fa fa-retweet fa-fw fa-lg'" [type]="'link'"
-          style="cursor: pointer;">
-        </amexio-nav-item>
-        <amexio-nav-item  position-right [title]="'About'" [icon]="'fa fa-address-book fa-fw fa-lg'" [type]="'link'"
-          style="cursor: pointer;">
-        </amexio-nav-item>
+        
+        <!-- <amexio-nav-item position-right *ngFor="let menus of amexiotechmenus" [type]="'menu'"
+                    [title]="menus.text" [icon]="menus.icon" [data]="menus.submenus"
+                    (onNavItemClick)="externalLink($event)">
+                </amexio-nav-item> -->
+
+
+                <amexio-nav-item position-right [title]="'Engage'" [icon]="'fa fa-retweet fa-fw fa-lg'" [type]="'menu'"
+style="cursor: pointer;">
+</amexio-nav-item>
+<amexio-nav-item position-right [title]="'Setting'" [icon]="'fa fa-gear fa-fw fa-lg'" [type]="'menu'"
+style="cursor: pointer;">
+</amexio-nav-item>
       </amexio-nav>
       <br>
       <br>
@@ -26,7 +30,7 @@
         <amexio-grid-item [name]="'gridDemo1'">
 
           <amexio-menu-ce [menu-positioning]="'left'" [font]="'sans-serif'" [animation-type]="4" [data]="tempData"
-            [size]="50">
+            [size]="50"  (onClick)="onMenuClick($event)" >
           </amexio-menu-ce>
         </amexio-grid-item>
 
