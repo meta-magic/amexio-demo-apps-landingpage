@@ -34,7 +34,6 @@ export class LandingPageComponent implements OnInit {
   DEMO_VIRTUAL_URL = 'https://meta-magic.github.io/amexio-virtualscroll-demo/#/sc';
   tempData: any;
   navmenus: any;
-  flag: boolean;
   gridDesktop: GridConfig;
   gridTablet: GridConfig;
   gridMobile: GridConfig;
@@ -94,8 +93,7 @@ export class LandingPageComponent implements OnInit {
     this.tempData = [
       {
         label: 'API',
-        "link": "https://amexio.tech/amexio-api",
-        "flag": true
+        "link": "https://amexio.tech/amexio-api"
 
       },
       {

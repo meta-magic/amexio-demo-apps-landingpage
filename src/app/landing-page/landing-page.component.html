@@ -11,18 +11,12 @@
       <amexio-nav  [enable-side-nav-position]="true" [title]="'Amexio Showcase'"
         [logo]="'assets/images/amexio-logo.png'">
         
-        <!-- <amexio-nav-item position-right *ngFor="let menus of amexiotechmenus" [type]="'menu'"
+        <amexio-nav-item position-right *ngFor="let menus of amexiotechmenus" [type]="'menu'"
                     [title]="menus.text" [icon]="menus.icon" [data]="menus.submenus"
                     (onNavItemClick)="externalLink($event)">
-                </amexio-nav-item> -->
+                </amexio-nav-item>
 
-
-                <amexio-nav-item position-right [title]="'Engage'" [icon]="'fa fa-retweet fa-fw fa-lg'" [type]="'menu'"
-style="cursor: pointer;">
-</amexio-nav-item>
-<amexio-nav-item position-right [title]="'Setting'" [icon]="'fa fa-gear fa-fw fa-lg'" [type]="'menu'"
-style="cursor: pointer;">
-</amexio-nav-item>
+                
       </amexio-nav>
       <br>
       <br>
