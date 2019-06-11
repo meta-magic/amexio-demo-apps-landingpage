@@ -11,8 +11,8 @@ import { AmexioGridLayoutService, GridConfig, GridConstants } from 'amexio-ng-ex
 export class LandingPageComponent implements OnInit {
   topMenuData: any;
   amexiotechmenus: any;
-  DEMO_FIRST_URL = 'https://meta-magic.github.io/amexio-ce-demo/#/home/dashboard?type=1';
-  DEMO_SEC_URL = 'https://meta-magic.github.io/amexio-ce-demo/#/home/dashboard?type=2';
+  DEMO_FIRST_URL = 'https://eedemo.amexio.org/#/home/dashboard';
+  DEMO_SEC_URL = 'https://eedemo.amexio.org/#/home/dashboardtwo';
   DEMO_TECH_M_URL = 'https://demo.amexio.org/ee/tecmflix/index.html#/app';
   DEMO_THREE_URL = ' https://cedemo.amexio.org/#/home/dashboard';
 
@@ -26,11 +26,11 @@ export class LandingPageComponent implements OnInit {
   DEMO_EIGHT_URL = ' https://meta-magic.github.io/viewport-Demo/#/home/menu-two';
   DEMO_NINE_URL = ' https://meta-magic.github.io/viewport-Demo/#/home/menu-three';
 
-  DEMO_SHOPPING_URL = 'https://demo.amexio.org/se/shoppingportal/#/home';
-  DEMO_POLICY_URL = 'https://demo.amexio.org/se/insuranceportal/#/home';
-  DEMO_ELECTION_URL = 'https://demo.amexio.org/se/us-election/';
+  DEMO_SHOPPING_URL = 'https://sedemo.amexio.org/se/shoppingportal/#/home';
+  DEMO_POLICY_URL = 'https://sedemo.amexio.org/se/insuranceportal/#/home';
+  DEMO_ELECTION_URL = 'https://sedemo.amexio.org/se/us-election/';
 
-  DEMO_THEME_URL = 'https://demo.amexio.org/se/v5.12/index.html#/home';
+  DEMO_THEME_URL = 'https://sedemo.amexio.org/se/v5.12/index.html#/home';
   DEMO_VIRTUAL_URL = 'https://meta-magic.github.io/amexio-virtualscroll-demo/#/sc';
   tempData: any;
   navmenus: any;
