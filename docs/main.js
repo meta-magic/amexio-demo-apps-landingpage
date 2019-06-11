@@ -212,8 +212,8 @@ var LandingPageComponent = /** @class */ (function () {
     function LandingPageComponent(http, _gridlayoutService) {
         this.http = http;
         this._gridlayoutService = _gridlayoutService;
-        this.DEMO_FIRST_URL = 'https://meta-magic.github.io/amexio-ce-demo/#/home/dashboard?type=1';
-        this.DEMO_SEC_URL = 'https://meta-magic.github.io/amexio-ce-demo/#/home/dashboard?type=2';
+        this.DEMO_FIRST_URL = 'https://eedemo.amexio.org/#/home/dashboard';
+        this.DEMO_SEC_URL = 'https://eedemo.amexio.org/#/home/dashboardtwo';
         this.DEMO_TECH_M_URL = 'https://demo.amexio.org/ee/tecmflix/index.html#/app';
         this.DEMO_THREE_URL = ' https://cedemo.amexio.org/#/home/dashboard';
         this.DEMO_FOUR_URL = ' https://meta-magic.github.io/viewport-Demo/#/home/scrollable-viewport';
@@ -223,10 +223,10 @@ var LandingPageComponent = /** @class */ (function () {
         this.DEMO_SEVEN_URL = ' https://meta-magic.github.io/viewport-Demo/#/home/menu-one';
         this.DEMO_EIGHT_URL = ' https://meta-magic.github.io/viewport-Demo/#/home/menu-two';
         this.DEMO_NINE_URL = ' https://meta-magic.github.io/viewport-Demo/#/home/menu-three';
-        this.DEMO_SHOPPING_URL = 'https://demo.amexio.org/se/shoppingportal/#/home';
-        this.DEMO_POLICY_URL = 'https://demo.amexio.org/se/insuranceportal/#/home';
-        this.DEMO_ELECTION_URL = 'https://demo.amexio.org/se/us-election/';
-        this.DEMO_THEME_URL = 'https://demo.amexio.org/se/v5.12/index.html#/home';
+        this.DEMO_SHOPPING_URL = 'https://sedemo.amexio.org/se/shoppingportal/#/home';
+        this.DEMO_POLICY_URL = 'https://sedemo.amexio.org/se/insuranceportal/#/home';
+        this.DEMO_ELECTION_URL = 'https://sedemo.amexio.org/se/us-election/';
+        this.DEMO_THEME_URL = 'https://sedemo.amexio.org/se/v5.12/index.html#/home';
         this.DEMO_VIRTUAL_URL = 'https://meta-magic.github.io/amexio-virtualscroll-demo/#/sc';
         this.createLayouts();
         // Create the Layouts
