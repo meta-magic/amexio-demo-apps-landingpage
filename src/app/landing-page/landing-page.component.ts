@@ -13,25 +13,24 @@ export class LandingPageComponent implements OnInit {
   amexiotechmenus: any;
   DEMO_FIRST_URL = 'https://eedemo.amexio.org/#/home/dashboard';
   DEMO_SEC_URL = 'https://eedemo.amexio.org/#/home/dashboardtwo';
-  DEMO_TECH_M_URL = 'https://demo.amexio.org/ee/tecmflix/index.html#/app';
+  DEMO_TECH_M_URL = 'https://cedemo.amexio.org/tecmflix/';
   DEMO_THREE_URL = ' https://cedemo.amexio.org/#/home/dashboard';
 
-  DEMO_FOUR_URL = ' https://meta-magic.github.io/viewport-Demo/#/home/scrollable-viewport';
-  DEMO_FIVE_URL = ' https://meta-magic.github.io/viewport-Demo/#/home/viewport';
-  DEMO_SIX_URL = ' https://meta-magic.github.io/viewport-Demo/#/home/video-viewport';
+  DEMO_FOUR_URL = ' https://cedemo.amexio.org/amexio-ce-demo-app/index.html#/viewport/viewport-one';
+  DEMO_FIVE_URL = ' https://cedemo.amexio.org/amexio-ce-demo-app/index.html#/viewport/viewport-two';
+  DEMO_SIX_URL = ' https://cedemo.amexio.org/amexio-ce-demo-app/index.html#/viewport/viewport-three';
 
   //
-
-  DEMO_SEVEN_URL = ' https://meta-magic.github.io/viewport-Demo/#/home/menu-one';
-  DEMO_EIGHT_URL = ' https://meta-magic.github.io/viewport-Demo/#/home/menu-two';
-  DEMO_NINE_URL = ' https://meta-magic.github.io/viewport-Demo/#/home/menu-three';
+  DEMO_SEVEN_URL = ' https://cedemo.amexio.org/amexio-ce-demo-app/index.html#/menu/menu-one';
+  DEMO_EIGHT_URL = 'https://cedemo.amexio.org/amexio-ce-demo-app/index.html#/menu/menu-two';
+  DEMO_NINE_URL = ' https://cedemo.amexio.org/amexio-ce-demo-app/index.html#/menu/menu-three';
 
   DEMO_SHOPPING_URL = 'https://sedemo.amexio.org/se/shoppingportal/#/home';
   DEMO_POLICY_URL = 'https://sedemo.amexio.org/se/insuranceportal/#/home';
   DEMO_ELECTION_URL = 'https://sedemo.amexio.org/se/us-election/';
 
   DEMO_THEME_URL = 'https://sedemo.amexio.org/se/v5.12/index.html#/home';
-  DEMO_VIRTUAL_URL = 'https://meta-magic.github.io/amexio-virtualscroll-demo/#/sc';
+  DEMO_VIRTUAL_URL = 'https://cedemo.amexio.org/Virtual-Scroller/#/sc';
   tempData: any;
   navmenus: any;
   gridDesktop: GridConfig;
