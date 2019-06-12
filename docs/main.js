@@ -356,12 +356,12 @@ var LandingPageComponent = /** @class */ (function () {
                 "text": "Case Studies",
                 "icon": "fa fa-clone fa-fw",
                 "submenus": [
-                    { "text": "Shopping Portal", "link": "https://demo.amexio.org/se/shoppingportal/#/home" },
-                    { "text": "US Election Results", "link": "https://demo.amexio.org/se/us-election/ " },
-                    { "text": "Insurance Portal", "link": "https://demo.amexio.org/se/insuranceportal/#/home" },
-                    { "text": "Movie Portal", "link": "https://demo.amexio.org/ee/" },
+                    { "text": "Shopping Portal", "link": "https://sedemo.amexio.org/se/shoppingportal/#/home" },
+                    { "text": "US Election Results", "link": "https://sedemo.amexio.org/se/us-election/ " },
+                    { "text": "Insurance Portal", "link": "https://sedemo.amexio.org/se/insuranceportal/#/home" },
+                    { "text": "Movie Portal", "link": "https://cedemo.amexio.org/tecmflix/#/app" },
                     { "text": "NpmStats", "link": "https://www.npmstats.com/" },
-                    { "text": "Creative Demo", "link": "https://cedemo.amexio.org/#/login" }
+                    { "text": "Creative Demo", "link": "https://eedemo.amexio.org/#/login" }
                 ]
             },
             {
