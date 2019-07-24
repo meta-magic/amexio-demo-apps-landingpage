@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { AmexioGridLayoutService, GridConfig, GridConstants } from 'amexio-ng-extensions';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -10,7 +11,6 @@ import { AmexioGridLayoutService, GridConfig, GridConstants } from 'amexio-ng-ex
 })
 export class LandingPageComponent implements OnInit {
   topMenuData: any;
-  amexiotechmenus: any;
   DEMO_FIRST_URL = 'https://eedemo.amexio.org/#/home/dashboard';
   DEMO_SEC_URL = 'https://eedemo.amexio.org/#/home/dashboardtwo';
   DEMO_TECH_M_URL = 'https://cedemo.amexio.org/tecmflix/';
@@ -59,7 +59,7 @@ export class LandingPageComponent implements OnInit {
 
   facebookLoginData: any;
   navBarData: any;
-  constructor(private http: HttpClient, private _gridlayoutService: AmexioGridLayoutService) {
+  constructor(public router: Router, private http: HttpClient, private _gridlayoutService: AmexioGridLayoutService) {
     this.createLayouts();
     // Create the Layouts
     this._gridlayoutService.createLayout(this.gridDesktop);
@@ -118,187 +118,8 @@ export class LandingPageComponent implements OnInit {
 
     ];
 
-    this.amexiotechmenus = [
-      {
-        "text": "Products",
-        "icon": "fa fa-snowflake-o fa-fw",
-        "submenus": [
-          {
-            "text": "Amexio API",
-            "link": "https://amexio.tech/amexio-api"
-          },
-          {
-            "text": "Amexio D3 Charts",
-            "link": " https://amexio.tech/amexio-d3-charts"
-          },
-          {
-            "text": "Amexio Canvas",
-            "link": "https://amexio.tech/amexio-canvas"
-          }, {
-            "text": "Amexio Colors",
-            "link": "https://amexio.tech/amexio-colors"
-          }, {
-            "text": "Amexio Plugins",
-            "link": "https://amexio.tech/amexio-plugins-1"
-          },
-          {
-            "text": "Amexio Demo Apps",
-            "link": "http://demo.amexio.tech/"
-          }
-        ]
-      },
-      {
-        "text": "Start Using",
-        "icon": "fa fa-television fa-fw",
-        "submenus": [
-          {
-            "text": "Roadmap",
-            "link": "https://amexio.tech/roadmap"
-          },
-          {
-            "text": "Support",
-            "link": "https://amexio.tech/support"
-          },
-          {
-            "text": "Pricing",
-            "link": "https://amexio.tech/pricing"
-          },
-          {
-            "text": "Quality-Assurance",
-            "link": "https://amexio.tech/quality-assurance"
-          },
-          {
-            "text": "Downloads",
-            "link": "https://amexio.tech/download"
-          },
-          {
-            "text": "License and Other Docs",
-            "link": "https://amexio.tech/license-and-other-docs-1"
-          },
-          {
-            "text": "Canvas Login (Beta)",
-            "link": "https://canvas.amexio.org/"
-          },
-          {
-            "text": "Subscribe ",
-            "link": "https://canvas.amexio.org/#/user/signup"
-          }
-        ]
-      },
-      {
-        "text": "Training",
-        "icon": "fa fa-user fa-fw",
-        "submenus": [
-          {
-            "text": "Component Example",
-            "link": "http://demo.amexio.tech/"
-          }, {
-            "text": "Amexio Training",
-            "link": "http://metaarivu.com/amexio-training"
-          }]
-      },
-      {
-        "text": "Case Studies",
-        "icon": "fa fa-clone fa-fw",
-        "submenus": [
-          {
-            "text": "Showcase",
-            "link": "https://showcase.amexio.org/#/landingPage-app"
-          },
-          {
-            "text": "Traffic Analysis",
-            "link": "https://eedemo.amexio.org/#/home/dashboard",
-            "separator": true,
-            "separatorHeader": "Enterprise Edition Apps"
-          },
-          {
-            "text": "City Analysis",
-            "link": "https://eedemo.amexio.org/#/home/dashboardtwo"
-          },
-          {
-            "text": "Creative Home Page",
-            "link": "https://cedemo.amexio.org/amexio-ce-demo-app/index.html#/ce-demo-app",
-            "separator": true,
-            "separatorHeader": "Creative Edition Apps"
-          },
-          {
-            "text": "Movie Portal",
-            "link": "https://cedemo.amexio.org/Virtual-Scroller/#/sc"
-           
-          },
-          {
-            "text": "TecMFlix",
-            "link": "https://cedemo.amexio.org/tecmflix/"
-          },
-          {
-            "text": "Components App",
-            "link": "https://demo.amexio.org/se/v5.12/index.html#/home",
-            "separator": true,
-            "separatorHeader": "Standard Edition Apps"
-          },
-          {
-            "text": "Insurance Portal",
-            "link": "https://sedemo.amexio.org/se/insuranceportal/#/home"
-          },
-          {
-            "text": "Shopping Portal",
-            "link": "https://sedemo.amexio.org/se/shoppingportal/#/home"
-          },
-          {
-            "text": "US Election Results",
-            "link": "https://sedemo.amexio.org/se/us-election/ "
-          },
-          {
-            "text": "NpmStats",
-            "link": "https://www.npmstats.com/"
-          }
-        ]
-      },
-      {
-        "text": "Engage",
-        "submenus": [
-          {
-            "text": "Events",
-            "link": "https://metamagicglobal.com/events"
-          }, {
-            "text": "Forums",
-            "link": "http://forum.metamagicglobal.com/"
-          }, {
-            "text": "Blogs",
-            "link": "http://blog.metamagicglobal.com/"
-          }, {
-            "text": "Node Package Manager",
-            "link": "https://www.npmjs.com/package/amexio-ng-extensions"
-          }, {
-            "text": "GitHub - Source Code",
-            "link": "https://github.com/meta-magic/amexio.github.io"
-          }
-        ]
-      },
-      {
-        "text": "About Us",
-        "submenus": [
-          {
-            "text": "Contact",
-            "link": "https://metamagicglobal.com/contact"
-          }, {
-            "text": "Company",
-            "link": "http://www.metamagicglobal.com/company"
-          }, {
-            "text": "MetaMagic",
-            "link": "https://www.metamagicglobal.com/"
-          }
-        ]
-      }
-    ];
   }
 
-
-  externalLink(event: any) {
-    if (event.data.node.link)
-      //this.document.location.href=event.data.node.link;
-      window.open(event.data.node.link, '_blank');
-  }
 
 
   createLayouts() {

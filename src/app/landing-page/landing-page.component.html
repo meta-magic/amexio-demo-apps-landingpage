@@ -1,3 +1,4 @@
+
 <amexio-viewport [type]="'2'" [scrollable]="true">
   <!-- image 1 -->
   <amexio-viewport-content class="view-port-bg-image" [scrollable]="false">
@@ -8,15 +9,7 @@
 
     <amexio-viewport-content-body>
 
-      <amexio-nav [enable-side-nav-position]="true" [enable-more-mode]="true" [title]="'Amexio Showcase'"
-        [logo]="'assets/images/amexio-logo.png'">
-
-        <amexio-nav-item position-right *ngFor="let menus of amexiotechmenus" [type]="'menu'" [title]="menus.text"
-          [icon]="menus.icon" [data]="menus.submenus" (onNavItemClick)="externalLink($event)">
-        </amexio-nav-item>
-
-
-      </amexio-nav>
+    
       <br>
       <br>
       <amexio-layout-grid style="padding: 0px 10px 0px 10px;" [layout]="'page1'">

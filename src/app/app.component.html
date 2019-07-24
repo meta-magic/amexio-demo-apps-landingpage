@@ -1,26 +1,41 @@
-<router-outlet ></router-outlet>
+<div style="padding-bottom:63px">
 
-
-<hr/>
-
-<div style="text-align: center; background: white">
-
-Copyright © <a style="color: blue" href="https://metamagicglobal.com" target="_blank">MetaMagic Global Inc</a>, 2017-19.NJ, USA.
-<a style="color: blue" href="http://www.amexio.tech/" target="_blank">Amexio Angular EXtensions</a>. All rights reserved. 
-<br />
-
-BetaMagic Global Pvt Ltd, Pune, Maharashtra, India is a wholly owned subsidiary of MetaMagic Global Inc, NJ, USA. 
-<br />
-
-Licensed under the <a style="color: blue" href="https://api.amexio.org/api/license.html"target="_blank">Apache2.0 License</a>.
-<a style="color: blue" href="http://api.amexio.org/" target="_blank">Amexio API Docs</a> by
-<a style="color: blue" href="https://creativecommons.org/licenses/by/4.0/legalcode" target="_blank">CC By 4.0 </a>
-<br />
-<hr/>
-Showcase and all the Demos are powered by Amexio API
+  <amexio-nav [enable-side-nav-position]="true" [enable-more-mode]="true" [title]="'Amexio Showcase'"
+    (onNavTitleClick)="titleClick()" [logo]="'assets/images/amexio-logo.png'">
+    <amexio-nav-item position-right (onNavItemClick)="titleClick()" [icon]="'fa fa-home fa-fw fa-lg'" [type]="'link'"
+      style="cursor: pointer;">
+    </amexio-nav-item>
+    <amexio-nav-item position-right *ngFor="let menus of amexiotechmenus" [type]="'menu'" [title]="menus.text"
+      [icon]="menus.icon" [data]="menus.submenus" (onNavItemClick)="externalLink($event)">
+    </amexio-nav-item>
+  </amexio-nav>
 
 </div>
 
-    
-<hr/>
+<router-outlet></router-outlet>
 
+<hr />
+
+<div style="text-align: center; background: white">
+
+  Copyright © <a style="color: blue" href="https://metamagicglobal.com" target="_blank">MetaMagic Global Inc</a>,
+  2017-19.NJ, USA.
+  <a style="color: blue" href="http://www.amexio.tech/" target="_blank">Amexio Angular EXtensions</a>. All rights
+  reserved.
+  <br />
+
+  BetaMagic Global Pvt Ltd, Pune, Maharashtra, India is a wholly owned subsidiary of MetaMagic Global Inc, NJ, USA.
+  <br />
+
+  Licensed under the <a style="color: blue" href="https://api.amexio.org/api/license.html" target="_blank">Apache2.0
+    License</a>.
+  <a style="color: blue" href="http://api.amexio.org/" target="_blank">Amexio API Docs</a> by
+  <a style="color: blue" href="https://creativecommons.org/licenses/by/4.0/legalcode" target="_blank">CC By 4.0 </a>
+  <br />
+  <hr />
+  Showcase and all the Demos are powered by Amexio API
+
+</div>
+
+
+<hr />
