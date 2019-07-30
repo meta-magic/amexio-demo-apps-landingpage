@@ -4,11 +4,11 @@ import { HttpClient } from "@angular/common/http";
 @Injectable()
 export class HTTPService {
 
-    constructor(private http: HttpClient){
+    constructor(private http: HttpClient) {
 
     }
 
-    fetch(url:string){
+    fetch(url: string) {
         return this.http.get(url);
     }
 }
