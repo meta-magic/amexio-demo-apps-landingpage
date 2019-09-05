@@ -57,7 +57,7 @@ export class AppComponent {
           {
             "text": "API Docs",
             "routeLink": false,
-            "link": "https://demo.amexio.org/se/v5.12/index.html",
+            "link": "http://api.amexio.org/",
             "separator": true
           }
         ]
